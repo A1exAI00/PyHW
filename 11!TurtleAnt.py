@@ -147,6 +147,7 @@ def draw_Nturt(N=4, V=0.5, r=300):
         t += 1 
         # wn.update()
     
+    print(f'Теоретическое время: {r/V * 1/np.sin(np.pi/N)}')
     print(f'Практическое время: {t}') # Вывод практического времени
 
     wn.clear()
@@ -160,7 +161,7 @@ def draw_Nturt(N=4, V=0.5, r=300):
 def test_time(N_max=10):
     n = []
     t = []
-    for i in range(3, N_max):
+    for i in range(2, N_max):
         n.append(i)
         t.append(draw_Nturt(i))
 
@@ -283,6 +284,6 @@ def ant_and_bucket():
 draw_4turt()
 # draw_Nturt(200)
 
-# test_time(N_max=20)
+# test_time(N_max=10)
 
 # ant_and_bucket()
